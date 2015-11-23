@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Create Customer</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    </h:head>
+    <h:body>
+
+        <div class="container">
+            <h:form id="form">
+                <h1><h:outputText value="Create a new customer"/></h1>
+
+                <p>
+                    <h:outputText value="Number"/>
+                    &nbsp;
+                    <h:inputText class="form-control" id="numberInput"
+                                 label="Number"
+                                 size="30"
+                                 />
+                </p>
+                <p>
+                    <h:outputText value="Firstname"/>
+                    &nbsp;
+                    <h:inputText class="form-control" id="fNameInput"
+                                 label="Firstname"
+                                 size="50"
+                                 />
+                </p>
+                <p>
+                    <h:outputText value="Lastname"/>
+                    &nbsp;
+                    <h:inputText class="form-control" id="lNameInput"
+                                 label="Lastname"
+                                 size="50"
+                                 />
+
+                </p>
+                <h:commandButton class="btn btn-default" value="Submit"/>
+            </h:form>
+        </div>
+    </h:body>
+</html>
