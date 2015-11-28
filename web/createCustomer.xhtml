@@ -47,10 +47,9 @@ and open the template in the editor.
                                  required="true"
                                  value="#{customerCreate.lastName}"
                                  />
-
                 </p>
                 <h:commandButton class="btn btn-default" value="Submit" action="#{customerCreate.saveCust()}"/>
-                <h:commandButton value="Cancel" type="reset"/>
+                <h:button class="btn btn-default" value="Cancel" outcome="customersList" />
             </h:form>
         </div>
     </h:body>
