@@ -24,6 +24,8 @@ and open the template in the editor.
                     <h:inputText class="form-control" id="numberInput"
                                  label="Number"
                                  size="30"
+                                 required="true"
+                                 value="#{customerCreate.number}"
                                  />
                 </p>
                 <p>
@@ -32,6 +34,8 @@ and open the template in the editor.
                     <h:inputText class="form-control" id="fNameInput"
                                  label="Firstname"
                                  size="50"
+                                 required="true"
+                                 value="#{customerCreate.firstName}"
                                  />
                 </p>
                 <p>
@@ -40,10 +44,12 @@ and open the template in the editor.
                     <h:inputText class="form-control" id="lNameInput"
                                  label="Lastname"
                                  size="50"
+                                 required="true"
+                                 value="#{customerCreate.lastName}"
                                  />
 
                 </p>
-                <h:commandButton class="btn btn-default" value="Submit"/>
+                <h:commandButton class="btn btn-default" value="Submit" action="#{customerCreate.saveCust()}"/>
             </h:form>
         </div>
     </h:body>

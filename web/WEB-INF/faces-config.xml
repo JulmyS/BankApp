@@ -13,5 +13,13 @@
             <default-locale>en</default-locale>
             <supported-locale>fr</supported-locale>
         </locale-config>
+        
+        <managed-bean>
+
+            <managed-bean-name>customersBean</managed-bean-name>
+            <managed-bean-class>ch.hearc.ig.odi.bean.CustomersBean</managed-bean-class>
+            <managed-bean-scope>customers</managed-bean-scope>
+
+        </managed-bean>
     </application>
 </faces-config>
