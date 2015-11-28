@@ -31,8 +31,9 @@ public class CustomerCreateBean implements Serializable{
     public CustomerCreateBean() {
     }
     
-    public void saveCust(){
+    public String saveCust(){
         services.saveCustomer(number, firstName, lastName);
+        return "createCustomerOk";
     }
 
     public int getNumber() {
