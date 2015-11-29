@@ -7,54 +7,54 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"    
       xmlns:h="http://java.sun.com/jsf/html">
-       <h:head>
-        <title>Create Customer</title>
+    <h:head>
+        <title>#{msg.create_new_account} - BankApp</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
     </h:head>
     <h:body>
 
         <div class="container">
             <h:form id="form">
-                <h1><h:outputText value="Create a new account"/></h1>
+                <h1><h:outputText value="#{msg.create_new_account}"/></h1>
 
                 <p>
-                    <h:outputText value="Number"/>
+                    <h:outputText value="#{msg.number}"/>
                     <h:inputText class="form-control" id="numberInput"
-                                 label="Number"
+                                 label="#{msg.number}"
                                  size="30"
                                  required="true"
                                  value="#{accountCreate.number}"
                                  />
                 </p>
                 <p>
-                    <h:outputText value="Name"/>
+                    <h:outputText value="#{msg.name}"/>
                     <h:inputText class="form-control" id="nameInput"
-                                 label="Name"
+                                 label="#{msg.name}"
                                  size="50"
                                  required="true"
                                  value="#{accountCreate.name}"
                                  />
                 </p>
                 <p>
-                    <h:outputText value="Balance"/>
+                    <h:outputText value="#{msg.balance}"/>
                     <h:inputText class="form-control" id="balanceInput"
-                                 label="Balance"
+                                 label="#{msg.balance}"
                                  size="50"
                                  required="true"
                                  value="#{accountCreate.balance}"
                                  />
                 </p>
-                                <p>
-                    <h:outputText value="Rate"/>
+                <p>
+                    <h:outputText value="#{msg.rate}"/>
                     <h:inputText class="form-control" id="rateInput"
-                                 label="Rate"
+                                 label="#{msg.rate}"
                                  size="50"
                                  required="true"
                                  value="#{accountCreate.rate}"
                                  />
                 </p>
-                <h:commandButton class="btn btn-default" value="Submit" action="#{accountCreate.saveAcc(customerDetail.customer.number)}"/>
-                <h:button class="btn btn-default" value="Cancel" outcome="customersList" />
+                <h:commandButton class="btn btn-default" value="#{msg.create_new_account}" action="#{accountCreate.saveAcc(customerDetail.customer.number)}"/>
+                <h:button class="btn btn-default" value="#{msg.cancel}" outcome="customersList" />
             </h:form>
 
         </div>

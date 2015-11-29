@@ -19,37 +19,37 @@ and open the template in the editor.
                 <h1><h:outputText value="Create a new customer"/></h1>
 
                 <p>
-                    <h:outputText value="Number"/>
+                    <h:outputText value="#{msg.number}"/>
                     &nbsp;
                     <h:inputText class="form-control" id="numberInput"
-                                 label="Number"
+                                 label="#{msg.number}"
                                  size="30"
                                  required="true"
                                  value="#{customerCreate.number}"
                                  />
                 </p>
                 <p>
-                    <h:outputText value="Firstname"/>
+                    <h:outputText value="#{msg.firstname}"/>
                     &nbsp;
                     <h:inputText class="form-control" id="fNameInput"
-                                 label="Firstname"
+                                 label="#{msg.firstname}"
                                  size="50"
                                  required="true"
                                  value="#{customerCreate.firstName}"
                                  />
                 </p>
                 <p>
-                    <h:outputText value="Lastname"/>
+                    <h:outputText value="#{msg.lastname}"/>
                     &nbsp;
                     <h:inputText class="form-control" id="lNameInput"
-                                 label="Lastname"
+                                 label="#{msg.lastname}"
                                  size="50"
                                  required="true"
                                  value="#{customerCreate.lastName}"
                                  />
                 </p>
-                <h:commandButton class="btn btn-default" value="Submit" action="#{customerCreate.saveCust()}"/>
-                <h:button class="btn btn-default" value="Cancel" outcome="customersList" />
+                <h:commandButton class="btn btn-default" value="#{msg.create_customer}" action="#{customerCreate.saveCust()}"/>
+                <h:button class="btn btn-default" value="#{msg.cancel}" outcome="customersList" />
             </h:form>
         </div>
     </h:body>

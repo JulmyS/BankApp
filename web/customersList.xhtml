@@ -9,20 +9,20 @@ and open the template in the editor.
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
     <head>
-        <title>Liste des clients</title>
+        <title>#{msg.customers_list_title}</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
         <div class="container">
-            <h3>Customer list</h3>
+            <h3>#{msg.customers_list_title}</h3>
             <h:form>
                 <h:dataTable class="table table-bordered" value="#{customerData.customers}" var="cust" cellspacing="4">
                     <h:column>
 
                         <f:facet name="header">
 
-                            <h:outputText value="Number" />
+                            <h:outputText value="#{msg.number}" />
 
                         </f:facet>
 
@@ -33,7 +33,7 @@ and open the template in the editor.
 
                         <f:facet name="header">
 
-                            <h:outputText value="Fistname" />
+                            <h:outputText value="#{msg.firstname}" />
 
                         </f:facet>
 
@@ -45,7 +45,7 @@ and open the template in the editor.
 
                         <f:facet name="header">
 
-                            <h:outputText value="Lastname" />
+                            <h:outputText value="#{msg.lastname}" />
 
                         </f:facet>
 
@@ -53,10 +53,10 @@ and open the template in the editor.
 
                     </h:column>
                     <h:column>
-                        <h:commandLink value="Details" action="#{customerDetail.saveDetailsOfCustomer(cust.number)}"/>
+                        <h:commandLink value="#{msg.details}" action="#{customerDetail.saveDetailsOfCustomer(cust.number)}"/>
                     </h:column>
                 </h:dataTable>
-                <h:button class="btn btn-default" value="Create new customer" outcome="createCustomer" />
+                <h:button class="btn btn-default" value="#{msg.create_customer}" outcome="createCustomer" />
             </h:form>
         </div>
     </body>

@@ -8,19 +8,19 @@ and open the template in the editor.
 <html xmlns="http://www.w3.org/1999/xhtml"    
       xmlns:h="http://java.sun.com/jsf/html">
     <head>
-        <title>Account details</title>
+        <title>#{msg.account_detail} - BankApp</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
         <div class="container">
             <h:form>
-                <h2>Account details</h2>
-                <h:outputText value="Number: " /><h:outputText value="#{accountDetail.account.number}" /><br />
-                <h:outputText value="Name: " /><h:outputText value="#{accountDetail.account.name}" /><br />
-                <h:outputText value="Balance: " /><h:outputText value="#{accountDetail.account.balance}" /><br />
-                <h:outputText value="Rate: " /><h:outputText value="#{accountDetail.account.rate}" /><br />
-                <h:commandButton class="btn btn-default" value="Cancel" action="#{customerDetail.saveDetailsOfCustomer(customerDetail.customer.number)}"/>
+                <h2>#{msg.account_detail}</h2>
+                <h:outputText value="#{msg.number}: " /><h:outputText value="#{accountDetail.account.number}" /><br />
+                <h:outputText value="#{msg.name}: " /><h:outputText value="#{accountDetail.account.name}" /><br />
+                <h:outputText value="#{msg.balance}: " /><h:outputText value="#{accountDetail.account.balance}" /><br />
+                <h:outputText value="#{msg.rate}: " /><h:outputText value="#{accountDetail.account.rate}" /><br />
+                <h:commandButton class="btn btn-default" value="#{msg.cancel}" action="#{customerDetail.saveDetailsOfCustomer(customerDetail.customer.number)}"/>
             </h:form>
         </div>
     </body>

@@ -9,49 +9,49 @@ and open the template in the editor.
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
     <head>
-        <title>Client details</title>
+        <title>#{msg.customer_detail}</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
         <div class="container">
             <h2>Client details</h2>
-            <h:outputText value="Number: " /><h:outputText value="#{customerDetail.customer.number}" /><br />
-            <h:outputText value="Fistname: " /><h:outputText value="#{customerDetail.customer.firstName}" /><br />
-            <h:outputText value="Lastname: " /><h:outputText value="#{customerDetail.customer.lastName}" />
-            <h3>Liste des comptes du client</h3>
+            <h:outputText value="#{msg.number}: " /><h:outputText value="#{customerDetail.customer.number}" /><br />
+            <h:outputText value="#{msg.firstname}: " /><h:outputText value="#{customerDetail.customer.firstName}" /><br />
+            <h:outputText value="#{msg.lastname}: " /><h:outputText value="#{customerDetail.customer.lastName}" />
+            <h3>#{msg.account_list}</h3>
             <h:form>
                 <h:dataTable class="table table-bordered" value="#{customerDetail.customer.accounts}" var="acc" cellspacing="4">
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Balance" />
+                            <h:outputText value="#{msg.balance}" />
                         </f:facet>
                         <h:outputText value="#{acc.balance}"/>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Name" />
+                            <h:outputText value="#{msg.name}" />
                         </f:facet>
                         <h:outputText value="#{acc.name}"/>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Number" />
+                            <h:outputText value="#{msg.number}" />
                         </f:facet>
                         <h:outputText value="#{acc.number}" />
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Rate" />
+                            <h:outputText value="#{msg.rate}" />
                         </f:facet>
                         <h:outputText value="#{acc.rate}" />
                     </h:column>
                     <h:column>
-                        <h:commandLink value="Details" action="#{accountDetail.saveDetailsOfAccount(acc.number)}"/>
+                        <h:commandLink value="#{msg.details}" action="#{accountDetail.saveDetailsOfAccount(acc.number)}"/>
                     </h:column>
                 </h:dataTable>
-                <h:button class="btn btn-default" value="Create new account" outcome="createAccount" />
-                <h:button class="btn btn-default" value="Cancel" outcome="customersList" />
+                <h:button class="btn btn-default" value="#{msg.create_new_account}" outcome="createAccount" />
+                <h:button class="btn btn-default" value="#{msg.cancel}" outcome="customersList" />
             </h:form>
         </div>
     </body>
