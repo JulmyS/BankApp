@@ -16,44 +16,48 @@ and open the template in the editor.
     <body>
         <div class="container">
             <h3>Customer list</h3>
-            <h:dataTable class="table table-bordered" value="#{customerData.customers}" var="cust" cellspacing="4">
-                <h:column>
+            <h:form>
+                <h:dataTable class="table table-bordered" value="#{customerData.customers}" var="cust" cellspacing="4">
+                    <h:column>
 
-                    <f:facet name="header">
+                        <f:facet name="header">
 
-                        <h:outputText value="Number" />
+                            <h:outputText value="Number" />
 
-                    </f:facet>
+                        </f:facet>
 
-                    <h:outputText value="#{cust.number}"/>
+                        <h:outputText value="#{cust.number}"/>
 
-                </h:column>
-                <h:column>
+                    </h:column>
+                    <h:column>
 
-                    <f:facet name="header">
+                        <f:facet name="header">
 
-                        <h:outputText value="Fistname" />
+                            <h:outputText value="Fistname" />
 
-                    </f:facet>
+                        </f:facet>
 
-                    <h:outputText value="#{cust.firstName}"/>
+                        <h:outputText value="#{cust.firstName}"/>
 
-                </h:column>
+                    </h:column>
 
-                <h:column>
+                    <h:column>
 
-                    <f:facet name="header">
+                        <f:facet name="header">
 
-                        <h:outputText value="Lastname" />
+                            <h:outputText value="Lastname" />
 
-                    </f:facet>
+                        </f:facet>
 
-                    <h:outputText value="#{cust.lastName}" />
+                        <h:outputText value="#{cust.lastName}" />
 
-                </h:column>
-
-            </h:dataTable>
-            <h:button class="btn btn-default" value="Create new customer" outcome="createCustomer" />
+                    </h:column>
+                    <h:column>
+                        <h:commandLink value="Details" action="#{customerDetail.saveDetailsOfCustomer(cust.number)}"/>
+                    </h:column>
+                </h:dataTable>
+                <h:button class="btn btn-default" value="Create new customer" outcome="createCustomer" />
+            </h:form>
         </div>
     </body>
 </html>
