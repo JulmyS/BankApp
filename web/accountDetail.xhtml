@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+        <title>Account details</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div class="container">
+            <h:form>
+                <h2>Account details</h2>
+                <h:outputText value="Number: " /><h:outputText value="#{accountDetail.account.number}" /><br />
+                <h:outputText value="Name: " /><h:outputText value="#{accountDetail.account.name}" /><br />
+                <h:outputText value="Balance: " /><h:outputText value="#{accountDetail.account.balance}" /><br />
+                <h:outputText value="Rate: " /><h:outputText value="#{accountDetail.account.rate}" /><br />
+                <h:commandButton class="btn btn-default" value="Cancel" action="#{customerDetail.saveDetailsOfCustomer(customerDetail.customer.number)}"/>
+            </h:form>
+        </div>
+    </body>
+</html>
