@@ -42,6 +42,18 @@ public class Services implements Serializable{
     public void saveCustomer(Integer number, String fn, String ln){
         bank.addCustomer(number, fn, ln);
     }
+    
+        /**
+     * Dit à la banque de créer un nouveau compte.
+     * @param number
+     * @param name
+     * @param balance
+     * @param rate
+     * @param customer
+     */
+    public void saveAccount(String number, String name, double balance, double rate, Customer customer){
+        bank.addAccount(number, name, rate, customer);
+    }
 
     /**
      * Retourne le client de la banque qui correspond au numéro passé en paramètre.

@@ -8,7 +8,7 @@ and open the template in the editor.
 <html xmlns="http://www.w3.org/1999/xhtml"    
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
-        <head>
+    <head>
         <title>Client details</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -22,52 +22,32 @@ and open the template in the editor.
             <h3>Liste des comptes du client</h3>
             <h:dataTable class="table table-bordered" value="#{customerDetail.customer.accounts}" var="acc" cellspacing="4">
                 <h:column>
-
                     <f:facet name="header">
-
                         <h:outputText value="Balance" />
-
                     </f:facet>
-
                     <h:outputText value="#{acc.balance}"/>
-
                 </h:column>
                 <h:column>
-
                     <f:facet name="header">
-
                         <h:outputText value="Name" />
-
                     </f:facet>
-
                     <h:outputText value="#{acc.name}"/>
-
                 </h:column>
-
                 <h:column>
-
                     <f:facet name="header">
-
                         <h:outputText value="Number" />
-
                     </f:facet>
-
                     <h:outputText value="#{acc.number}" />
-
                 </h:column>
-
                 <h:column>
-
                     <f:facet name="header">
-
                         <h:outputText value="Rate" />
-
                     </f:facet>
-
                     <h:outputText value="#{acc.rate}" />
-
                 </h:column>
             </h:dataTable>
+            <h:button class="btn btn-default" value="Create new account" outcome="createAccount" />
+            <h:button class="btn btn-default" value="Cancel" outcome="customersList" />
         </div>
     </body>
 </html>

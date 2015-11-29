@@ -5,12 +5,58 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html">
+       <h:head>
+        <title>Create Customer</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    </h:head>
+    <h:body>
+
+        <div class="container">
+            <h:form id="form">
+                <h1><h:outputText value="Create a new account"/></h1>
+
+                <p>
+                    <h:outputText value="Number"/>
+                    <h:inputText class="form-control" id="numberInput"
+                                 label="Number"
+                                 size="30"
+                                 required="true"
+                                 value="#{accountCreate.number}"
+                                 />
+                </p>
+                <p>
+                    <h:outputText value="Name"/>
+                    <h:inputText class="form-control" id="nameInput"
+                                 label="Name"
+                                 size="50"
+                                 required="true"
+                                 value="#{accountCreate.name}"
+                                 />
+                </p>
+                <p>
+                    <h:outputText value="Balance"/>
+                    <h:inputText class="form-control" id="balanceInput"
+                                 label="Balance"
+                                 size="50"
+                                 required="true"
+                                 value="#{accountCreate.balance}"
+                                 />
+                </p>
+                                <p>
+                    <h:outputText value="Rate"/>
+                    <h:inputText class="form-control" id="rateInput"
+                                 label="Rate"
+                                 size="50"
+                                 required="true"
+                                 value="#{accountCreate.rate}"
+                                 />
+                </p>
+                <h:commandButton class="btn btn-default" value="Submit" action="#{accountCreate.saveAcc(customerDetail.customer.number)}"/>
+                <h:button class="btn btn-default" value="Cancel" outcome="customersList" />
+            </h:form>
+
+        </div>
+    </h:body>
 </html>
