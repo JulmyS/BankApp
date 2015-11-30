@@ -29,7 +29,10 @@ public class CustomersBean implements Serializable{
     public CustomersBean(){
         
     }
-    
+    /**
+     * Méthode qui retourne la liste des clients
+     * @return 
+     */
     public List<Customer> getCustomers(){
         List<Customer> listCust = services.getCustomersList();
         return listCust;

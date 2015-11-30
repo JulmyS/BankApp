@@ -5,7 +5,6 @@
  */
 package ch.hearc.ig.odi.customeraccount.bean;
 
-import ch.hearc.ig.odi.customeraccount.business.Customer;
 import ch.hearc.ig.odi.customeraccount.service.Services;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -31,6 +30,12 @@ public class AccountCreateBean {
     public AccountCreateBean() {
     }
     
+    /**
+     * Méthode qui ajoute un nouveau compte à l'utilisateur passé en paramètre.
+     * 
+     * @param customerNbr
+     * @return la page qui devra être redirigé 
+     */
     public String saveAcc(int customerNbr){
         services.saveAccount(number, name, balance, rate, services.getCustomer(customerNbr));
         return "createAccountOk";

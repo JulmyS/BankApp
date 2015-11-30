@@ -28,6 +28,11 @@ public class CustomerDetailBean {
     
     private Customer customer;
     
+    /**
+     * Méthode qui enregistre en mémoire le détail des clients afin de l'afficher dans la page de détail
+     * @param number
+     * @return 
+     */
     public String saveDetailsOfCustomer(int number){
         this.customer = this.services.getCustomer(number);
         return "detailClient";

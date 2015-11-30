@@ -31,6 +31,10 @@ public class CustomerCreateBean implements Serializable{
     public CustomerCreateBean() {
     }
     
+    /**
+     * Méthode qui enregistre un nouveau client
+     * @return 
+     */
     public String saveCust(){
         services.saveCustomer(number, firstName, lastName);
         return "createCustomerOk";

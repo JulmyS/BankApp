@@ -28,6 +28,11 @@ public class AccountDetailBean {
     
     private Account account;
     
+    /**
+     * Méthode qui garde en mémoire le détail du compte afin de l'afficher dans la page de détail
+     * @param number
+     * @return 
+     */
     public String saveDetailsOfAccount(String number){
         this.account = this.services.getAccount(number);
         return "accountDetail";
